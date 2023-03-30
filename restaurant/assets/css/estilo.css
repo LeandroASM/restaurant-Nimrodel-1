@@ -1,0 +1,69 @@
+body{
+	margin: 0px;
+}
+
+header {
+  height: 10em;
+  background-image: url("../img/fondo.jpg");
+	background-size: contain; 	
+}
+
+header li{
+	display: inline-block;
+	margin-left: 1em ;
+	color: white;
+}
+#logo {
+  width: 110px;
+  height: 110px;
+}
+
+h1{
+	text-align: center;
+}
+
+#titulo{
+	font-size: 4em;
+	color: gray	;
+}
+
+form {
+  background-color: #070707;
+  margin: 3% 37%;
+  padding: 1em 2em;
+  color: white;
+	display: block;
+  text-align: center;
+}
+.productos {
+  display: inline-block;
+  margin: 2em;
+	padding: 1em;
+  height: auto;
+  text-align: center;
+	align-items: center;
+}
+.img-productos {
+  width: 25em;
+  height: 17em;
+}
+p{
+	margin-top: 0px;
+}
+
+hr{
+	width: 21em;
+	padding-bottom: 0em;
+	margin-bottom: -1em;
+	border-width: 3px;
+	border-style: solid;
+}
+
+footer{
+	background-image: url("../img/fondo.jpg");
+	background-size: 100% 100%;
+	height: 17em;
+	color: white;
+	text-align: center;
+	padding-top: 12em;
+}
