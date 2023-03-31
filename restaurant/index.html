@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-
     UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 
-    
+
 
 </head>
 
@@ -22,8 +22,12 @@
         <ul>
             <li>Nuestros Productos</li>
             <li>Sobre Nosotros</li>
-            <a href="#comuniquemonos"><li>Contacto</li></a>
-            <a href="#reserva"><li>Reserva</li></a>
+            <a href="#comuniquemonos">
+                <li>Contacto</li>
+            </a>
+            <a href="#reserva">
+                <li>Reserva</li>
+            </a>
         </ul>
     </header>
 
@@ -31,37 +35,40 @@
         <h1 id="titulo">NimoRed Pub Restaurant</h1>
         <hr>
         <h1>Destacados de la semana</h1>
-        <section class="productos">
-            <img src="assets/img/bebidas.jpg" class="img-productos">
-            <h3>GASEOSAS</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        </section>
-        <section class="productos">
-            <img src="assets/img/tablas.jpg" class="img-productos">
-            <h3>TABLAS</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        </section>
-        <section class="productos">
-            <img src="assets/img/shop.jpeg" class="img-productos">
-            <h3>SHOP CERVERZA</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        </section>
-        
-      
-        <section>
-            
-            <form action="" method="" id="comuniquemonos">
+        <div class="container">
+            <section class="productos col-xl-3 col-lg-4 col-md-10 col-sm-10">
+                <img src="assets/img/bebidas.jpg" class="img-productos col-xl-11 col-lg-12 col-md-10 col-sm-10">
+                <h3>GASEOSAS</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </section>
+            <section class="productos col-xl-3 col-lg-4 col-md-10 col-sm-10">
+                <img src="assets/img/tablas.jpg" class="img-productos col-xl-11 col-lg-12 col-md-10 col-sm-10">
+                <h3>TABLAS</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </section>
+            <section class="productos col-xl-3 col-lg-8 col-md-10 col-sm-10">
+                <img src="assets/img/shop.jpeg" class="img-productos col-xl-11 col-lg-10 col-md-10 col-sm-10">
+                <h3>SHOP CERVERZA</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </section>
+        </div>
+
+        <section class="form col-xl-12 col-lg-12">
+
+            <form action="" method="" id="comuniquemonos" class="col-xl-3 col-lg-6">
                 <h2>Comuniquemonos</h2>
                 <label for="nombre">NOMBRE: </label>
                 <input type="text" name="nombre" id="nombre" placeholder="Leandro Arias" required>
                 <br><br>
 
                 <label for="correo">CORREO: </label>
-                <input type="text" name="correo" id="correo" placeholder="xxxxxxxxxx@gmail.com" pattern="^[^@]+@[^@]+\.[a-zA-Z]{2,}$" required>
+                <input type="text" name="correo" id="correo" placeholder="xxxxxxxxxx@gmail.com"
+                    pattern="^[^@]+@[^@]+\.[a-zA-Z]{2,}$" required>
                 <br><br>
 
                 <label for="telefono">TELEFONO: </label>
-                <input type="text" name="telefono" id="telefono" placeholder="+569XXXXXXXXX" pattern="^\+5{1}6{1}9{1}[0-9]{8}$"  required>
+                <input type="text" name="telefono" id="telefono" placeholder="+569XXXXXXXXX"
+                    pattern="^\+5{1}6{1}9{1}[0-9]{8}$" required>
                 <br><br>
 
                 <label for="motivo">MOTIVO: </label>
@@ -80,22 +87,24 @@
             </form>
             <br><br>
         </section>
-       
-        <section>
 
-            
-            <form action="" method="post" id="reserva">
+        <section class="form col-xl-12 col-lg-12">
+
+
+            <form action="" method="post" id="reserva" class="col-xl-3 col-lg-6">
                 <h2>Reserva</h2>
                 <label for="nombre">NOMBRE: </label>
                 <input type="text" name="nombre" id="nombre" placeholder="Leandro Arias" required>
                 <br><br>
 
                 <label for="correo">CORREO: </label>
-                <input type="text" name="correo" id="correo" placeholder="xxxxxxxxxxx@gmail.com" pattern="^[^@]+@[^@]+\.[a-zA-Z]{2,}$" required>
+                <input type="text" name="correo" id="correo" placeholder="xxxxxxxxxxx@gmail.com"
+                    pattern="^[^@]+@[^@]+\.[a-zA-Z]{2,}$" required>
                 <br><br>
 
                 <label for="telefono">TELEFONO: </label>
-                <input type="text" name="telefono" id="telefono" placeholder="+569XXXXXXXX" pattern="^\+5{1}6{1}9{1}[0-9]{8}$"   required>
+                <input type="text" name="telefono" id="telefono" placeholder="+569XXXXXXXX"
+                    pattern="^\+5{1}6{1}9{1}[0-9]{8}$" required>
                 <br><br>
 
                 <label for="fecha">FECHA: </label>
@@ -116,9 +125,11 @@
         </section>
     </main>
     <br>
-   
+
     <footer>
-        <p> Todos los derechos reservados <strong> &reg; </strong></p>
+        <div class="footer">
+            <p> Todos los derechos reservados <strong> &reg; </strong></p>
+        </div>
     </footer>
 </body>
 
