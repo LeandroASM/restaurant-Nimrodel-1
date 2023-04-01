@@ -10,52 +10,74 @@
     <link rel="stylesheet" href="assets/css/estilo.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-
     UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-
-
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
-
 <body>
-
-    <header>
-        <img src="assets/img/n.png" alt="logo" id="logo">
-        <ul>
-            <li>Nuestros Productos</li>
-            <li>Sobre Nosotros</li>
-            <a href="#comuniquemonos">
-                <li>Contacto</li>
-            </a>
-            <a href="#reserva">
-                <li>Reserva</li>
-            </a>
-        </ul>
-    </header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="assets/img/n.png" alt="" width="10%"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link">Nuestros Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Sobre Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#comuniquemonos">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#reserva">Reserva</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
     <main>
-        <h1 id="titulo">NimoRed Pub Restaurant</h1>
-        <hr>
-        <h1>Destacados de la semana</h1>
-        <div class="container">
-            <section class="productos col-xl-3 col-lg-4 col-md-10 col-sm-10">
-                <img src="assets/img/bebidas.jpg" class="img-productos col-xl-11 col-lg-12 col-md-10 col-sm-10">
-                <h3>GASEOSAS</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            </section>
-            <section class="productos col-xl-3 col-lg-4 col-md-10 col-sm-10">
-                <img src="assets/img/tablas.jpg" class="img-productos col-xl-11 col-lg-12 col-md-10 col-sm-10">
-                <h3>TABLAS</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            </section>
-            <section class="productos col-xl-3 col-lg-8 col-md-10 col-sm-10">
-                <img src="assets/img/shop.jpeg" class="img-productos col-xl-11 col-lg-10 col-md-10 col-sm-10">
-                <h3>SHOP CERVERZA</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            </section>
+        <h1 class="fs-1" id="titulo">NimoRed Pub Restaurant</h1>
+        <hr id="hr">
+        <h3>Destacados de la semana</h3>
+
+        <div class="row-a row row-cols-1 row-cols-md-3 g-4  justify-content-center">
+            <div class="col-xl-4 col-lg-4 col-md-10 col-sm-12 col-xs-11">
+                <div class="card">
+                    <img src="assets/img/bebidas.jpg" class="img-producto card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">GASEOSAS</h5>
+                        <p class="card-text text-center">This is a longer card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-10 col-sm-12 col-xs-11">
+                <div class="card">
+                    <img src="assets/img/tablas.jpg" class="img-producto card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">TABLAS</h5>
+                        <p class="card-text text-center">This is a longer card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-10 col-sm-12 col-xs-11 nav">
+                <div class="card">
+                    <img src="assets/img/shop.jpeg" class="img-producto card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">SHOP CERVEZA</h5>
+                        <p class="card-text text-center">This is a longer card with supporting text below as a natural lead-in to
+                            additional content.</p>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <section class="form col-xl-12 col-lg-12">
-
-            <form action="" method="" id="comuniquemonos" class="col-xl-3 col-lg-6">
+            <form action="" method="" id="comuniquemonos" class="col-xl-7 col-lg-9">
                 <h2>Comuniquemonos</h2>
                 <label for="nombre">NOMBRE: </label>
                 <input type="text" name="nombre" id="nombre" placeholder="Leandro Arias" required>
@@ -91,7 +113,7 @@
         <section class="form col-xl-12 col-lg-12">
 
 
-            <form action="" method="post" id="reserva" class="col-xl-3 col-lg-6">
+            <form action="" method="post" id="reserva" class="col-xl-7 col-lg-9">
                 <h2>Reserva</h2>
                 <label for="nombre">NOMBRE: </label>
                 <input type="text" name="nombre" id="nombre" placeholder="Leandro Arias" required>
@@ -131,6 +153,11 @@
             <p> Todos los derechos reservados <strong> &reg; </strong></p>
         </div>
     </footer>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 
 </html>
