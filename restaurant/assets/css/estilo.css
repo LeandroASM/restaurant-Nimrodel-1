@@ -3,16 +3,16 @@ body {
 }
 
 
-  .navbar {
-    font-size: 0.8em;
-    height: 5em;
+  .editado {
+    /* font-size: 0.8em;
+    height: 5em; */
 
     background-image: url("../img/fondo2.png");
     background-size: contain;
     background-position: center center;
   }
 
-  .navbar li a{
+  .editado li a{
     display: inline-block;
     margin-left: 1em;
     color: white;
