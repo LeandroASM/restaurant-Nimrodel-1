@@ -14,12 +14,84 @@ function formReserva(){
     document.getElementById("form-contacto").classList.add('d-none')
 }
 
+//utilizamos el evento ready, para luego empezar a utilizar 
+//los elementos del formulario y validar datos
+$(document).ready(function(){
+
+    $("#boton-reserva").click(function(){
+        var validacion = validarFormReserva();
+        if(validarFormReserva()){
+        
+        alert("Estimado(a) " + validacion.nombre + " agradecemos por reservar con nosotros. Hemos registrado " + validacion.asistentes + " asistentes. Se ha enviado el código de confirmación al correo " + validacion.correo + " \n Gracias por preferirnos");
+        }    
+    });
+
+    /*
+    llenar modal con los datos del restaurant
+    */
+
+    $('.img-producto').click(function(){
+        var imgScr = this.src;
+        var titulo = this.closest('div').querySelector('h5').innerHTML;
+        var texto = this.closest('div').querySelector('p').innerHTML;
+        
+        $('#titulo_modal').text(titulo);
+        $('#texto_modal').text(texto);
+        $('#img_modal').attr('src',imgScr);
+
+        $('.myModal').show();
+    })
+    /* 
+        cerrar modal con el ícono X
+    */
+    $('#close_modal').click(function(){
+        $('.myModal').hide();
+    })
+
+    /* 
+        cerrar modal haciendo click en el area opacada
+    */
+    $('.myModal').click(function(event){
+        if(!$(event.target).closest('#modal_content').lenght){
+            $(this).hide();
+        }
+    })
+
+});
+
+//validamos los datos que se obtienen mediante JQuery
+function validarFormReserva(){
+    var nombre = $.trim($("#nombre-reserva").val());
+    var correo = $.trim($("#correo-reserva").val());
+    var telefono = $.trim($("#telefono-reserva").val());
+    var fecha = $.trim($("#fecha-reserva").val());
+    var hora = $.trim($("#hora-reserva").val());
+    var asistentes = $.trim($("#asistentes-reserva").val());
+
+    var formValido = true;
+    if(nombre == "" || validarNombre(nombre) == false){
+        alert("El campo 'Nombre' es requerido y debe tener un formato correcto");
+        formValido = false;
+    }
+    if(correo == "" || validarCorreo(correo) == false){
+        alert("El campo 'Correo' es requerido y debe tener un formato correcto");
+        formValido = false;
+    }
+
+    if(asistentes == "" ){
+        alert("El campo 'Asistentes' es requerido y debe tener un formato correcto");
+        formValido = false;
+    }
+
+    return {formValido: formValido, nombre: nombre, correo: correo, asistentes: asistentes};
+}
+
+
 
 var form = document.getElementById("formulario-contacto");
 //función que se ejecuta al enviar el formulario
 form.addEventListener('submit',function(event){
     event.preventDefault();
-    console.log(validarForm());
     if(validarForm()){
         exito();
     }
@@ -35,17 +107,17 @@ function validarForm(){
     var textomotivo = datos.textomotivo;
     
     var formValido = true;
-    if(nombre == "" || validarNombre == false){
+    if(nombre == "" || validarNombre(nombre) == false){
         alert("El campo 'Nombre' es requerido y debe tener un formato correcto");
         formValido = false;
     }
     
-    if(correo == "" || validarCorreo == false){
+    if(correo == "" || validarCorreo(correo) == false){
         alert("El campo 'Correo' es requerido y debe tener un formato correcto");
         formValido = false;
     }
     
-    if(telefono == "" || validarTelefono == false){
+    if(telefono == "" ){
         alert("El campo 'Teléfono es requerido y debe tener un formato correcto");
         formValido = false;
     }
@@ -68,7 +140,6 @@ function exito(){
     var correo = datos.correo;
     var motivo = datos.motivo;
 
-    alert("nombre " + nombre );
     alert(`Muchas gracias ${nombre} hemos recibido su ${motivo} y enviaremos una pronta respuesta al correo ${correo}`);
 }
 
@@ -99,7 +170,8 @@ function validarCorreo(correo){
     let expression = /^[\w]+(\.)?[\w]+@[\w]+\.[\w]{2,3}$/i;
     return expression.test(correo);
 }
-function validarTelefono(telefono){
-    let expression = /^+5{1}6{1}9{1}[0-9]{8}$/i;
-    return expression.test(telefono);
-}
+
+
+
+
+
